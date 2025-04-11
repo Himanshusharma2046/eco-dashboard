@@ -1,5 +1,6 @@
 import axios from 'axios';
-
+import config from '../config';
+axios.defaults.baseURL = config.apiUrl;
 // Auth API
 export const authApi = {
     login: async (email, password) => {
